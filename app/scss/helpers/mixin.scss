@@ -1,0 +1,40 @@
+//mixin fonts
+@mixin playfair_display($weight: normal, $style: normal) {
+  font-family: 'playfair_display', Helvetica, sans-serif;
+  @if $weight == normal {
+    font-weight: normal;
+  } @else if $weight == bold {
+    font-weight: 700;
+  }
+
+  @if $style == normal {
+    font-style: normal;
+  } @else if $style == italic {
+    font-style: italic;
+  }
+}
+
+//breakpoints
+
+@mixin smallDesktop {
+  @media screen and (max-width: $smallDesktop) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+//functions
+@function rem($px){
+  @return $px / 16px + 0rem
+}

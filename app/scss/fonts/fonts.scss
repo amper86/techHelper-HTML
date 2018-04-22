@@ -1,0 +1,19 @@
+/*playfair_display*/
+
+@font-face {
+  font-family: 'playfair_display';
+  src: url('../fonts/playfairdisplayregular.eot');
+  src: url('../fonts/playfairdisplayregular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/playfairdisplayregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'playfair_display';
+  src: url('../fonts/playfairdisplaybold.eot');
+  src: url('../fonts/playfairdisplaybold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/playfairdisplaybold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

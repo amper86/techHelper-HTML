@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include playfair_display();
+  font-size: 16px;
+  color: $mainTextColor;
+  @include tablets {
+    font-size: 15px;
+  }
+  @include phones {
+    font-size: 14px;
+  }
+}
+
