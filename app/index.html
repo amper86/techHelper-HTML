@@ -12,8 +12,47 @@
 </head>
     <body>
         <div class="wrapper">
-            <h1 class="title">Welcome to tech-helper</h1>
-            <h2>Hello world</h2>
+            <header class="header">
+                <div class="container">
+                    <h1>Tech-helper</h1>
+                </div>
+            </header>
+            <section class="section">
+                <div class="container">
+                    <h2 class="section__title title">Расчет количества краски на тираж</h2>
+                    <div class="section__content ink-calc">
+                        <div class="ink-calc__wrapper">
+                            <div class="ink-calc__block">
+                                <label class="ink-calc__label" for="pm">Количество погонных метров</label>
+                                <input class="ink-calc__input" type="text" id="pm" name="pm">
+                            </div>
+                            <div class="ink-calc__block">
+                                <label class="ink-calc__label" for="width">Ширина в мм</label>
+                                <input class="ink-calc__input" type="text" id="width" name="width">
+                            </div>
+                            <div class="ink-calc__block">
+                                <label class="ink-calc__label" for="cell">Глубина ячейки в гр/м<sup>3</sup></label>
+                                <input class="ink-calc__input" type="text" id="cell" name="cell">
+                            </div>
+                            <div class="ink-calc__block">
+                                <label class="ink-calc__label" for="print-area">Площадь запечатки %</label>
+                                <input class="ink-calc__input" type="text" id="print-area" name="print-area">
+                            </div>
+                        </div>
+                        <button class="ink-calc__btn btn">Рассчитать</button>
+                        <div class="ink-calc__answer-block answer-block">
+                            <div class="answer-block__row">
+                                тут будет выводиться информация
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="container">
+
+                </div>
+            </footer>
         </div>
     </body>
 </html>
