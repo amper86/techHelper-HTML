@@ -1,8 +1,22 @@
-@import "helpers/normalize";
 @import "helpers/fontawesome-all";
 @import "fonts/fonts";
 @import "helpers/var";
 @import "helpers/mixin";
 @import "helpers/base";
 
-@import "test";
+// components
+
+
+@import "components/title";
+@import "components/ink-calc";
+@import "components/btn";
+@import "components/answer-block";
+
+
+//layout
+
+@import "layout/wrapper";
+@import "layout/container";
+@import "layout/header";
+@import "layout/section-calc";
+@import "layout/footer";

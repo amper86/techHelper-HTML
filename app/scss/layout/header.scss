@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  height: rem(80px);
+  background-color: $thirdColor;
+
+  &__container {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
