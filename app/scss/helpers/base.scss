@@ -12,12 +12,12 @@ a {
   text-decoration: none;
 }
 
-html,
-body {
+html {
   height: 100%;
 }
 
 body {
+  height: 100%;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,3 +33,4 @@ body {
   }
 }
 
+//todo: разобраться, чтобы при большом списе с футером и фоном все было хорошо (возможно флексы убрать)
