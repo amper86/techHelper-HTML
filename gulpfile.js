@@ -44,7 +44,7 @@ gulp.task('styles', function () {
         .pipe(sourcemaps.init())
         .pipe(sassGlob())
         .pipe(sass())
-        .pipe(autoprefixer(['last 10 versions'], { cascade: false }))
+        //.pipe(autoprefixer(['last 10 versions'], { cascade: false }))
         .pipe(csso())
         .pipe(rename({ suffix: ".min"}))
         .pipe(sourcemaps.write('/'))

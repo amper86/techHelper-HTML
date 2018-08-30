@@ -1,23 +1,37 @@
 //mixin fonts
-@mixin playfair_display($weight: normal, $style: normal) {
-  font-family: 'playfair_display', Helvetica, sans-serif;
-  @if $weight == normal {
+
+@mixin  gagalin() {
+  font-family: 'Gagalin-Regular', Helvetiva, sans-serif;
+}
+
+@mixin lifehack() {
+  font-family: 'Lifehack-Medium', Helvetiva, sans-serif;
+}
+
+@mixin ubuntu ($style: normal) {
+  font-family: 'Ubuntu', Helvetiva, sans-serif;
+
+  @if $style == regular {
     font-weight: normal;
-  } @else if $weight == bold {
-    font-weight: 700;
   }
 
-  @if $style == normal {
-    font-style: normal;
-  } @else if $style == italic {
-    font-style: italic;
+  @if $style == light {
+    font-weight: 300;
+  }
+
+  @if $style == medium {
+    font-weight: 500;
+  }
+
+  @if $style == bold {
+    font-weight: bold;
   }
 }
 
 //breakpoints
 
-@mixin smallDesktop {
-  @media screen and (max-width: $smallDesktop) {
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
     @content;
   }
 }

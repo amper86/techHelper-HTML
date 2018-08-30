@@ -4,19 +4,8 @@
 @import "helpers/mixin";
 @import "helpers/base";
 
-// components
-
-
-@import "components/title";
-@import "components/ink-calc";
-@import "components/btn";
-@import "components/answer-block";
-
-
 //layout
+@import "layout/*.scss";
 
-@import "layout/wrapper";
-@import "layout/container";
-@import "layout/header";
-@import "layout/section-calc";
-@import "layout/footer";
+// components
+//@import "components/*.scss";

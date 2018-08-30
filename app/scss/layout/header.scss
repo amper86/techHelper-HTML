@@ -1,13 +1,59 @@
 .header {
   width: 100%;
-  height: rem(80px);
   background-color: $thirdColor;
 
-  &__container {
+  &__wrapper {
+    max-width: $desktop;
+    padding: rem(20px);
     margin: 0 auto;
-    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &-container {
+      width: rem(70px);
+      height: rem(70px);
+      margin-right: rem(15px);
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rem(54px);
+    color: $titleTextColor;
+    @include gagalin();
+  }
+  &__nav-list {
+    display: flex;
+
+  }
+
+  &__nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $titleTextColor;
+    font-size: rem(20px);
+    margin-right: rem(20px);
+
+    & p {
+      font-size: rem(14px);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
+
+//todo: остановился на хеадере лого
