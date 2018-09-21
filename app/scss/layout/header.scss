@@ -1,9 +1,13 @@
 .header {
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: $thirdColor;
 
   &__wrapper {
     max-width: $desktop;
+    height: rem(90px);
     padding: rem(20px);
     margin: 0 auto;
     display: flex;
