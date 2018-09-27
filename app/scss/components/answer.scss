@@ -1,0 +1,14 @@
+.answer {
+  width: 100%;
+  min-height: 30vh;
+  background-color: $titleTextColor;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__block {
+    max-width: rem(1000px);
+    margin: rem(15px) auto;
+  }
+}
