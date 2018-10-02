@@ -1,0 +1,26 @@
+.btn {
+  outline: none;
+  @include ubuntu(medium);
+  transition: 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-blue {
+    color: $mainColor;
+    background-color: $titleTextColor;
+    border: 2px solid $titleTextColor;
+
+    &:hover {
+      background-color: $mainColor;
+      color: $titleTextColor;
+    }
+  }
+
+  &-normal-size {
+    font-size: rem(20px);
+    border-radius: rem(8px);
+    padding: rem(5px) rem(10px);
+  }
+}

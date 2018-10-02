@@ -7,7 +7,7 @@ $(() => {
     let answerBlockAcc = $('.answer__block-row');
 
     let calculateAcc = (pmNumberAcc, widthNumberAcc, rateNumberAcc, printAreaNumberAcc) => {
-        let answerAcc = pmNumberAcc * (widthNumberAcc / mmToMAcc) * (printAreaNumberAcc / 100) * rateNumberAcc;
+        let answerAcc = (pmNumberAcc * (widthNumberAcc / mmToMAcc) * (printAreaNumberAcc / 100)) / 1000 * rateNumberAcc;
         return answerAcc.toFixed(3)
     };
 
