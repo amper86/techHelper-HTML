@@ -5,7 +5,18 @@
   align-items: center;
   justify-content: center;
 
+  &__title {
+    @include lifehack();
+    font-size: rem(28px);
+    margin-bottom: rem(20px);
+  }
+
   &__block {
     text-align: left;
+    margin-bottom: rem(15px);
+  }
+
+  &__label {
+    margin-right: rem(10px);
   }
 }

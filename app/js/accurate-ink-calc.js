@@ -24,7 +24,7 @@ $(() => {
         printAreaAcc.val('');
     };
 
-    $('.ink-calc-accurate__btn').on('click', (e) => {
+    $('.accurate-calculation-ink__btn').on('click', (e) => {
         e.preventDefault();
 
         let pmNumberAcc = pmAcc.val();

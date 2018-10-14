@@ -1,0 +1,17 @@
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+
+  &-blue {
+    color: $mainTextColor;
+    border-bottom: 2px solid $titleTextColor;
+  }
+
+  &-normal-size {
+    width: 100px;
+    padding: rem(5px) rem(10px) 0;
+    font-size: rem(18px);
+  }
+}

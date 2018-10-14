@@ -34,52 +34,65 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="accurate-calculation-ink">
-                                <h2 class="accurate-calculation-ink__title">Точный расчет краски на тираж</h2>
-                                <div class="accurate-calculation-ink__wrapper">
-                                    <div class="accurate-calculation-ink__block">
-                                        <label class="ink-calc-accurate__label" for="pm-accurate">Количество погонных метров (м)</label>
-                                        <input class="ink-calc-accurate__input" type="text" id="pm-accurate" name="pm-accurate">
-                                    </div>
-                                    <div class="accurate-calculation-ink__block">
-                                        <label class="ink-calc-accurate__label" for="width-accurate">Ширина (мм)</label>
-                                        <input class="ink-calc-accurate__input" type="text" id="width-accurate" name="width-accurate">
-                                    </div>
-                                    <div class="accurate-calculation-ink__block">
-                                        <label class="ink-calc-accurate__label" for="rate-accurate">Расход краски (гр/м<sup><small>2</small></sup>)</label>
-                                        <input class="ink-calc-accurate__input" type="text" id="rate-accurate" name="rate-accurate">
-                                    </div>
-                                    <div class="accurate-calculation-ink__block">
-                                        <label class="ink-calc-accurate__label" for="print-area-accurate">Площадь запечатки (%)</label>
-                                        <input class="ink-calc-accurate__input" type="text" id="print-area-accurate" name="print-area-accurate">
-                                    </div>
-                                    <button class="ink-calc-accurate__btn btn btn-blue btn-normal-size"><i class="fas fa-calculator"></i> рассчитать</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
+
                             <div class="ink-calc">
                                 <h2 class="ink-calc__title">Расчет количества краски на тираж</h2>
                                 <div class="ink-calc__wrapper">
                                     <div class="ink-calc__block">
-                                        <label class="ink-calc__label" for="pm">Количество погонных метров (м)</label>
-                                        <input class="ink-calc__input" type="text" id="pm" name="pm">
+                                        <label class="ink-calc__label label-blue" for="pm">Количество погонных метров (м):</label>
+                                        <input class="ink-calc__input input input-blue input-normal-size" type="text" id="pm" name="pm">
                                     </div>
                                     <div class="ink-calc__block">
-                                        <label class="ink-calc__label" for="width">Ширина (мм)</label>
-                                        <input class="ink-calc__input" type="text" id="width" name="width">
+                                        <label class="ink-calc__label label-blue" for="width">Ширина (мм):</label>
+                                        <input class="ink-calc__input input input-blue input-normal-size" type="text" id="width" name="width">
                                     </div>
                                     <div class="ink-calc__block">
-                                        <label class="ink-calc__label" for="cell">Глубина ячейки (гр/м<sup><small>3</small></sup>)</label>
-                                        <input class="ink-calc__input" type="text" id="cell" name="cell">
+                                        <input class="ink-calc__checkbox" type="checkbox" name="rateCalc" id="rateCalc" checked>
+                                        <label id="rateCalcLabel" class="ink-calc__label-checkbox label-blue" for="rateCalc">Красочный слой/Глубина ячейки</label>
+                                    </div>
+                                    <div id="cellBlock" class="ink-calc__block">
+                                        <label class="ink-calc__label label-blue" for="cell">Глубина ячейки (гр/м<sup><small>3</small></sup>):</label>
+                                        <input class="ink-calc__input input input-blue input-normal-size" type="text" id="cell" name="cell">
+                                    </div>
+                                    <div id="rateBlock" class="ink-calc__block">
+                                        <label class="ink-calc__label label-blue" for="rate">Расход краски (гр/м<sup><small>2</small></sup>):</label>
+                                        <input class="ink-calc__input input input-blue input-normal-size" type="text" id="rate" name="rate">
                                     </div>
                                     <div class="ink-calc__block">
-                                        <label class="ink-calc__label" for="print-area">Площадь запечатки (%)</label>
-                                        <input class="ink-calc__input" type="text" id="print-area" name="print-area">
+                                        <label class="ink-calc__label label-blue" for="print-area">Площадь запечатки (%):</label>
+                                        <input class="ink-calc__input input input-blue input-normal-size" type="text" id="print-area" name="print-area">
                                     </div>
                                 </div>
                                 <button class="ink-calc__btn btn btn-blue btn-normal-size"><i class="fas fa-calculator"></i> рассчитать</button>
                             </div>
+
+                            <!--<div class="accurate-calculation-ink">
+                                <h2 class="accurate-calculation-ink__title">Точный расчет краски на тираж</h2>
+                                <div class="accurate-calculation-ink__wrapper">
+                                    <div class="accurate-calculation-ink__block">
+                                        <label class="accurate-calculation-ink__label label-blue" for="pm-accurate">Погонных метров (м):</label>
+                                        <input class="accurate-calculation-ink__input input input-blue input-normal-size" type="text" id="pm-accurate" name="pm-accurate">
+                                    </div>
+                                    <div class="accurate-calculation-ink__block">
+                                        <label class="accurate-calculation-ink__label label-blue" for="width-accurate">Ширина (мм):</label>
+                                        <input class="accurate-calculation-ink__input input input-blue input-normal-size" type="text" id="width-accurate" name="width-accurate">
+                                    </div>
+                                    <div class="accurate-calculation-ink__block">
+                                        <label class="accurate-calculation-ink__label label-blue" for="rate-accurate">Расход краски (гр/м<sup><small>2</small></sup>):</label>
+                                        <input class="accurate-calculation-ink__input input input-blue input-normal-size" type="text" id="rate-accurate" name="rate-accurate">
+                                    </div>
+                                    <div class="accurate-calculation-ink__block">
+                                        <label class="accurate-calculation-ink__label label-blue" for="print-area-accurate">Площадь запечатки (%):</label>
+                                        <input class="accurate-calculation-ink__input input input-blue input-normal-size" type="text" id="print-area-accurate" name="print-area-accurate">
+                                    </div>
+                                    <button class="accurate-calculation-ink__btn btn btn-blue btn-normal-size"><i class="fas fa-calculator"></i> рассчитать</button>
+                                </div>
+                            </div>-->
+
+
+                        </div>
+                        <div class="swiper-slide">
+                            slide 2
                         </div>
                         <div class="swiper-slide">Slide 3</div>
                     </div>
@@ -103,10 +116,11 @@
             </section>
             <footer>
                 <p>v 1.0.0</p>
+                <p>Mullakaev Oleg</p>
             </footer>
         </div>
 
-        <!--ToDo: зазор между футером и секцией с ответами-->
+        <!--ToDo: 1. скрипт свайпера перенести в js файл -->
 
         <script>
             let swiper = new Swiper('.swiper-container', {
