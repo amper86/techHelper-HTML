@@ -46,17 +46,19 @@
                                         <label class="ink-calc__label label-blue" for="width">Ширина (мм):</label>
                                         <input class="ink-calc__input input input-blue input-normal-size" type="text" id="width" name="width">
                                     </div>
-                                    <div class="ink-calc__block">
-                                        <input class="ink-calc__checkbox" type="checkbox" name="rateCalc" id="rateCalc" checked>
-                                        <label id="rateCalcLabel" class="ink-calc__label-checkbox label-blue" for="rateCalc">Красочный слой/Глубина ячейки</label>
-                                    </div>
-                                    <div id="cellBlock" class="ink-calc__block">
-                                        <label class="ink-calc__label label-blue" for="cell">Глубина ячейки (гр/м<sup><small>3</small></sup>):</label>
-                                        <input class="ink-calc__input input input-blue input-normal-size" type="text" id="cell" name="cell">
-                                    </div>
-                                    <div id="rateBlock" class="ink-calc__block">
-                                        <label class="ink-calc__label label-blue" for="rate">Расход краски (гр/м<sup><small>2</small></sup>):</label>
-                                        <input class="ink-calc__input input input-blue input-normal-size" type="text" id="rate" name="rate">
+                                    <div class="ink-calc__block ink-calc__checkbox">
+                                        <div class="ink-calc__checkbox-block_input">
+                                            <input class="ink-calc__checkbox_input" type="checkbox" name="rateCalc" id="rateCalc" checked>
+                                            <label id="rateCalcLabel" class="ink-calc__label-checkbox label-blue" for="rateCalc"></label>
+                                        </div>
+                                        <div id="cellBlock" class="ink-calc__checkbox-block">
+                                            <label class="ink-calc__label label-blue" for="cell">Глубина ячейки (см<sup><small>3</small></sup>/м<sup><small>2</small></sup>):</label>
+                                            <input class="ink-calc__input input input-blue input-normal-size" type="text" id="cell" name="cell">
+                                        </div>
+                                        <div id="rateBlock" class="ink-calc__checkbox-block">
+                                            <label class="ink-calc__label label-blue" for="rate">Расход краски (г/м<sup><small>2</small></sup>):</label>
+                                            <input class="ink-calc__input input input-blue input-normal-size" type="text" id="rate" name="rate">
+                                        </div>
                                     </div>
                                     <div class="ink-calc__block">
                                         <label class="ink-calc__label label-blue" for="print-area">Площадь запечатки (%):</label>
@@ -65,36 +67,18 @@
                                 </div>
                                 <button class="ink-calc__btn btn btn-blue btn-normal-size"><i class="fas fa-calculator"></i> рассчитать</button>
                             </div>
-
-                            <!--<div class="accurate-calculation-ink">
-                                <h2 class="accurate-calculation-ink__title">Точный расчет краски на тираж</h2>
-                                <div class="accurate-calculation-ink__wrapper">
-                                    <div class="accurate-calculation-ink__block">
-                                        <label class="accurate-calculation-ink__label label-blue" for="pm-accurate">Погонных метров (м):</label>
-                                        <input class="accurate-calculation-ink__input input input-blue input-normal-size" type="text" id="pm-accurate" name="pm-accurate">
-                                    </div>
-                                    <div class="accurate-calculation-ink__block">
-                                        <label class="accurate-calculation-ink__label label-blue" for="width-accurate">Ширина (мм):</label>
-                                        <input class="accurate-calculation-ink__input input input-blue input-normal-size" type="text" id="width-accurate" name="width-accurate">
-                                    </div>
-                                    <div class="accurate-calculation-ink__block">
-                                        <label class="accurate-calculation-ink__label label-blue" for="rate-accurate">Расход краски (гр/м<sup><small>2</small></sup>):</label>
-                                        <input class="accurate-calculation-ink__input input input-blue input-normal-size" type="text" id="rate-accurate" name="rate-accurate">
-                                    </div>
-                                    <div class="accurate-calculation-ink__block">
-                                        <label class="accurate-calculation-ink__label label-blue" for="print-area-accurate">Площадь запечатки (%):</label>
-                                        <input class="accurate-calculation-ink__input input input-blue input-normal-size" type="text" id="print-area-accurate" name="print-area-accurate">
-                                    </div>
-                                    <button class="accurate-calculation-ink__btn btn btn-blue btn-normal-size"><i class="fas fa-calculator"></i> рассчитать</button>
-                                </div>
-                            </div>-->
-
-
                         </div>
                         <div class="swiper-slide">
                             slide 2
                         </div>
-                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">
+                            Slide 3
+                            <form action="start">
+                                <input  type="checkbox" title="check">
+                                <input type="radio" title="111">
+                                <input type="radio" title="222">
+                            </form>
+                        </div>
                     </div>
 
                     <div class="swiper-button-next">
