@@ -7,14 +7,18 @@
   position: relative;
 
   &__title {
-    @include lifehack();
+    @include gagalin();
     font-size: rem(28px);
     margin-bottom: rem(20px);
   }
 
   &__block {
     text-align: left;
-    margin-bottom: rem(15px);
+    margin-bottom: rem(10px);
+
+    &:last-child {
+      margin-bottom: rem(15px);
+    }
   }
 
   &__checkbox {
@@ -25,8 +29,8 @@
 
     &_input {
       position: absolute;
-      left: 111px;
-      //opacity: 0;
+      left: -9999px;
+      opacity: 0;
 
       &:checked + .ink-calc__label-checkbox {
         background-color: $mainColor;
@@ -74,31 +78,33 @@
     border-radius: 18px;
     display: inline-block;
     position: relative;
-    font-size: rem(14px);
+    font-size: 12px;
     cursor: pointer;
     background-color: $titleTextColor;
     transition: all 150ms ease-in-out;
 
+    &:hover {
+      @include boxShadow($titleTextColor);
+    }
+
     &:before {
-      width: 30px;
+      width: 44px;
       position: absolute;
-      top: 0;
-      left: 8px;
-      content: 'г/м2';
+      top: 2px;
+      left: 2px;
+      content: 'см3/м2';
       color: $titleTextColor;
       opacity: 0;
     }
 
     &:after {
-      font-size: 12px;
       width: 44px;
       position: absolute;
       top: 2px;
-      right: 0;
-      content: 'см3/м2';
+      right: -10px;
+      content: 'г/м2';
       color: $mainColor;
       opacity: 1;
     }
   }
-
 }

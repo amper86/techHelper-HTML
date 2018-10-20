@@ -34,7 +34,6 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-
                             <div class="ink-calc">
                                 <h2 class="ink-calc__title">Расчет количества краски на тираж</h2>
                                 <div class="ink-calc__wrapper">
@@ -52,11 +51,11 @@
                                             <label id="rateCalcLabel" class="ink-calc__label-checkbox label-blue" for="rateCalc"></label>
                                         </div>
                                         <div id="cellBlock" class="ink-calc__checkbox-block">
-                                            <label class="ink-calc__label label-blue" for="cell">Глубина ячейки (см<sup><small>3</small></sup>/м<sup><small>2</small></sup>):</label>
+                                            <label class="ink-calc__label label-blue" for="cell">Объем ячейки (см<sup><small>3</small></sup>/м<sup><small>2</small></sup>):</label>
                                             <input class="ink-calc__input input input-blue input-normal-size" type="text" id="cell" name="cell">
                                         </div>
                                         <div id="rateBlock" class="ink-calc__checkbox-block">
-                                            <label class="ink-calc__label label-blue" for="rate">Расход краски (г/м<sup><small>2</small></sup>):</label>
+                                            <label class="ink-calc__label label-blue" for="rate">Краскоперенос (г/м<sup><small>2</small></sup>):</label>
                                             <input class="ink-calc__input input input-blue input-normal-size" type="text" id="rate" name="rate">
                                         </div>
                                     </div>
@@ -73,11 +72,6 @@
                         </div>
                         <div class="swiper-slide">
                             Slide 3
-                            <form action="start">
-                                <input  type="checkbox" title="check">
-                                <input type="radio" title="111">
-                                <input type="radio" title="222">
-                            </form>
                         </div>
                     </div>
 
@@ -91,10 +85,21 @@
                 </div>
             </section>
             <section class="answer">
-                <h3 class="answer__title">Тут будут все расчеты...</h3>
-                <div class="answer__block">
-                    <div class="answer__block-row">
-                        <span>test test</span>
+                <h3 class="answer__title">Расчет:</h3>
+                <div class="answer__wrapper">
+                    <div class="answer__block">
+                        <div class="answer__block-row">
+                            <div class="answer__short-answer">
+                                <span>1234.56 кг</span>
+                                <span><i class="fas fa-arrow-alt-circle-down"></i></span>
+                            </div>
+                            <ul class="answer__description">
+                                <li>погонных метров: 12345 м</li>
+                                <li>ширина: 123мм</li>
+                                <li>краскоперенос: 1.3 г/м2</li>
+                                <li>запечатка: 50%</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -104,21 +109,6 @@
             </footer>
         </div>
 
-        <!--ToDo: 1. скрипт свайпера перенести в js файл -->
-
-        <script>
-            let swiper = new Swiper('.swiper-container', {
-                loop: false, //когда включен делает дублирующие слайды
-                allowTouchMove: false, //когда false можно переключить слайд только кнопкой prev, next
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-            });
-        </script>
+        <!--ToDo: почему то не работает чекбокс в слайдере!!!!-->
     </body>
 </html>

@@ -1,18 +1,63 @@
 .answer {
   width: 100%;
   min-height: 30vh;
+  padding: rem(15px) 0;
   background-color: $titleTextColor;
 
   &__title {
+    @include gagalin();
     text-align: center;
   }
 
-  &__block {
-    max-width: rem(1000px);
+
+  &__wrapper {
+    max-width: 1000px;
     margin: 0 auto;
     padding: rem(15px) 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablets {
+      padding: rem(10px) rem(25px);
+    }
+  }
+
+
+  &__block {
+    padding: rem(10px) rem(20px);
+    border: 2px solid $mainColor;
+    border-radius: 20px;
+    color: $mainColor;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__block-row {
+    width: 100%;
+    background-color: $titleTextColor;
+  }
+
+  &__short-answer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    overflow: hidden;
+    height: 0;
+    font-size: 0;
+    width: 100%;
+
+    & li {
+      width: 50%;
+      display: inline-block;
+      font-size: rem(16px);
+      text-align: center;
+    }
   }
 }
+
+//ToDo: сделать аккордон по ответам как бургере

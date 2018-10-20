@@ -48,6 +48,16 @@
   }
 }
 
+//shadows
+
+@mixin boxShadow ($color: 000000) {
+  box-shadow: 0 0 20px 0 rgba($color,0.6);
+}
+
+@mixin textShadow ($color: 000000) {
+  text-shadow: 0 0 30px rgba($color, 1);
+}
+
 //functions
 @function rem($px){
   @return $px / 16px + 0rem

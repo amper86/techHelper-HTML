@@ -19,7 +19,7 @@ $(() => {
 
     let cellRateLabel = () => {
 
-        //console.log(checkbox.prop('checked'));
+        //console.log(checkbox.prop('checked')); //сначала сдела по св-ву checked потом из-за бага сделал по флагу
 
         if (cellBlock.hasClass('hide')) {
             //console.log(1);
@@ -78,7 +78,7 @@ $(() => {
         console.log(printAreaNumber);*/
 
         let kg = calculate(pmNumber, widthNumber, cellNumber, printAreaNumber, rateNumber);
-        print(kg);
+        print(kg, pmNumber, widthNumber, cellNumber, printAreaNumber, rateNumber);
 
         clear();
     });
@@ -95,3 +95,5 @@ $(() => {
         cellRateLabel();
     });
 });
+
+//ToDo: сделать в функции print вывод номальной разметки ответа

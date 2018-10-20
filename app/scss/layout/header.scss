@@ -35,6 +35,15 @@
     font-size: rem(54px);
     color: $titleTextColor;
     @include gagalin();
+    @include textShadow($titleTextColor);
+
+    @include tablets {
+      font-size: rem(32px);
+    }
+
+    @include phones {
+      font-size: rem(12px);
+    }
   }
   &__nav-list {
     display: flex;
@@ -48,7 +57,12 @@
     align-items: center;
     color: $titleTextColor;
     font-size: rem(20px);
+    transition: all .3s ease;
     margin-right: rem(20px);
+
+    &:hover {
+      @include textShadow($titleTextColor);
+    }
 
     & p {
       font-size: rem(14px);
@@ -59,5 +73,3 @@
     }
   }
 }
-
-//todo: остановился на хеадере лого
