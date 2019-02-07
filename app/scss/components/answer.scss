@@ -22,21 +22,24 @@
     }
   }
 
-
   &__block {
-    padding: rem(10px) rem(20px);
+    margin-bottom: rem(5px);
     border: 2px solid $mainColor;
     border-radius: 20px;
     color: $mainColor;
     transition: all 0.3s ease;
 
+    &_active {
+
+    }
+
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
 
   &__block-row {
-    width: 100%;
+    margin: rem(10px) rem(20px);
     background-color: $titleTextColor;
   }
 
@@ -47,9 +50,9 @@
 
   &__description {
     overflow: hidden;
-    height: 0;
     font-size: 0;
     width: 100%;
+    transition: height ease 0.3s;
 
     & li {
       width: 50%;
@@ -60,4 +63,4 @@
   }
 }
 
-//ToDo: сделать аккордон по ответам как бургере
+//ToDo: протестировать аккордеон и сделать добавление ответа нужными блоками в аккордеон
