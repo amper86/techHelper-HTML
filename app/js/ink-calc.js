@@ -39,19 +39,20 @@ $(() => {
         //console.log(checkbox.prop('checked'));
 
         if (checkboxFlag) {
-            answer = (pmNumber * (widthNumber / mmToM) * (printAreaNumber / 100)) / 1000 * rateNumber;
+            answer = (pmNumber * (widthNumber / mmToM) * rateNumber * (printAreaNumber / 100)) / 1000;
+
+          //console.log(answer, pmNumber, widthNumber, cellNumber, printAreaNumber, rateNumber);
         } else {
-            answer = pmNumber * (widthNumber / mmToM) * k * cellNumber * (printAreaNumber / 100)/ 1000;
+            answer = pmNumber * (widthNumber / mmToM) * k * cellNumber * (printAreaNumber / 100) / 1000;
         }
+
         return answer.toFixed(3);
     };
 
 
-    let print = (cal) => {
-        let answerCal = cal + ' кг';
-        let answerHTML = '<p>' + answerCal + '</p>';
-        answerBlock.append(answerHTML);
-        //console.log(cal);
+    let print = (kg, pmNumber, widthNumber, cellNumber=0, printAreaNumber, rateNumber=0) => {
+        console.log(kg, pmNumber, widthNumber, cellNumber, rateNumber, printAreaNumber);
+      //ToDo: сделать в функции print вывод номальной разметки ответа
     };
 
     let clear = () => {
@@ -95,5 +96,3 @@ $(() => {
         cellRateLabel();
     });
 });
-
-//ToDo: сделать в функции print вывод номальной разметки ответа

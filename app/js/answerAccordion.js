@@ -1,10 +1,12 @@
 $(function () {
-  $('.answer__short-answer').on('click', function (e) {
+  /*$('.answer__short-answer').on('click', function (e) {*/
+  $('.answer__block').on('click', function (e) {
 
     e.preventDefault();
 
     let $this = $(this),
-      answerBlock = $this.closest('.answer__block'),
+      /*answerBlock = $this.closest('.answer__block'),*/
+      answerBlock = $this,
       answerWrapper = $this.closest('.answer__wrapper'),
       answerBlocks = answerWrapper.find('.answer__block'),
       activeClass = 'answer__block_active',
@@ -17,6 +19,8 @@ $(function () {
     if (!answerBlock.hasClass(activeClass)) {
       answerBlocks.removeClass(activeClass);
       answerBlock.addClass(activeClass);
+
+      console.log('нет класса а');
 
       otherContent.css({
         'height': 0
