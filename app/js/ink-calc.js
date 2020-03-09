@@ -52,7 +52,34 @@ $(() => {
 
     let print = (kg, pmNumber, widthNumber, cellNumber=0, printAreaNumber, rateNumber=0) => {
         console.log(kg, pmNumber, widthNumber, cellNumber, rateNumber, printAreaNumber);
-      //ToDo: сделать в функции print вывод номальной разметки ответа
+      
+      const answerWrapper = document.querySelector('.answer__wrapper');
+        const answerBlockElement = document.createElement('div');
+        const shortAnswerElement = document.createElement('div');
+        const iElement = document.createElement('i');
+        const spanElement = document.createElement('span');
+        const spanElement2 = document.createElement('span');
+        const detailInfo = [pmNumber, widthNumber, cellNumber || rateNumber, printAreaNumber];
+        const ulElement = document.createElement('ul');
+
+        console.log(detailInfo);
+
+        
+        
+        shortAnswerElement.classList.add('answer__short-answer');
+        spanElement.innerHTML = kg;
+        shortAnswerElement.append(spanElement);
+        iElement.classList.add('fas');
+        iElement.classList.add('fa-arrow-alt-circle-down');
+        spanElement2.append(iElement);
+        shortAnswerElement.append(spanElement2);
+        answerBlockElement.classList.add('answer__block-row');
+
+        ulElement.addClass('answer__description');
+        //ToDo: сделать в функции print вывод номальной разметки ответа тут остановился.
+        
+        answerBlockElement.append(shortAnswerElement);
+        answerWrapper.append(answerBlockElement);
     };
 
     let clear = () => {
