@@ -56,6 +56,7 @@ $(() => {
       const answerWrapper = document.querySelector('.answer__wrapper');
         const answerBlockElement = document.createElement('div');
         const shortAnswerElement = document.createElement('div');
+        const blockElement = document.createElement('div');
         const iElement = document.createElement('i');
         const spanElement = document.createElement('span');
         const spanElement2 = document.createElement('span');
@@ -64,22 +65,34 @@ $(() => {
 
         console.log(detailInfo);
 
-        
+        const makeLi = (text, number, dim) => {
+            let liElement = document.createElement('li');
+            liElement.innerHTML = `${text} ${number}${dim}`;
+            return liElement;
+        }
         
         shortAnswerElement.classList.add('answer__short-answer');
-        spanElement.innerHTML = kg;
+        spanElement.innerHTML = `${kg} кг`;
         shortAnswerElement.append(spanElement);
         iElement.classList.add('fas');
         iElement.classList.add('fa-arrow-alt-circle-down');
         spanElement2.append(iElement);
         shortAnswerElement.append(spanElement2);
         answerBlockElement.classList.add('answer__block-row');
+        blockElement.classList.add('answer__block');
 
-        ulElement.addClass('answer__description');
-        //ToDo: сделать в функции print вывод номальной разметки ответа тут остановился.
+        ulElement.classList.add('answer__description');
+
+        //todo: сделать првильный вывод объема ячейки
+        ulElement.append(makeLi('погонных метров:', pmNumber, 'м'));
+        ulElement.append(makeLi('ширина:', widthNumber, 'мм'));
+        ulElement.append(makeLi('краскоперенос:', rateNumber, 'г/м2'));
+        ulElement.append(makeLi('площадь запечатки:', printAreaNumber, '%'));
         
         answerBlockElement.append(shortAnswerElement);
-        answerWrapper.append(answerBlockElement);
+        answerBlockElement.append(ulElement);
+        blockElement.append(answerBlockElement);
+        answerWrapper.append(blockElement);
     };
 
     let clear = () => {
@@ -119,7 +132,6 @@ $(() => {
             checkboxFlag = true;
         }
 
-        //console.log('hi');
         cellRateLabel();
     });
 });

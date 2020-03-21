@@ -23,6 +23,7 @@
   }
 
   &__block {
+    max-width: 65%;
     margin-bottom: rem(5px);
     border: 2px solid $mainColor;
     border-radius: 20px;

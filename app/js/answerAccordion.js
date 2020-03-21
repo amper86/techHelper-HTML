@@ -1,6 +1,7 @@
 $(function () {
   /*$('.answer__short-answer').on('click', function (e) {*/
-  $('.answer__block').on('click', function (e) {
+  //$('.answer__block').on('click', function (e) {
+  $('.answer').on('click', '.answer__block', function (e) {
 
     e.preventDefault();
 
