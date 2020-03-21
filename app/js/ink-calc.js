@@ -51,7 +51,7 @@ $(() => {
 
 
     let print = (kg, pmNumber, widthNumber, cellNumber=0, printAreaNumber, rateNumber=0) => {
-        console.log(kg, pmNumber, widthNumber, cellNumber, rateNumber, printAreaNumber);
+        //console.log(kg, pmNumber, widthNumber, cellNumber, rateNumber, printAreaNumber);
       
       const answerWrapper = document.querySelector('.answer__wrapper');
         const answerBlockElement = document.createElement('div');
@@ -60,10 +60,8 @@ $(() => {
         const iElement = document.createElement('i');
         const spanElement = document.createElement('span');
         const spanElement2 = document.createElement('span');
-        const detailInfo = [pmNumber, widthNumber, cellNumber || rateNumber, printAreaNumber];
         const ulElement = document.createElement('ul');
 
-        console.log(detailInfo);
 
         const makeLi = (text, number, dim) => {
             let liElement = document.createElement('li');
@@ -83,10 +81,13 @@ $(() => {
 
         ulElement.classList.add('answer__description');
 
-        //todo: сделать првильный вывод объема ячейки
         ulElement.append(makeLi('погонных метров:', pmNumber, 'м'));
         ulElement.append(makeLi('ширина:', widthNumber, 'мм'));
-        ulElement.append(makeLi('краскоперенос:', rateNumber, 'г/м2'));
+        if (!cellNumber) {
+            ulElement.append(makeLi('краскоперенос:', rateNumber, 'г/м2'));
+        } else {
+            ulElement.append(makeLi('объем ячейки:', cellNumber, 'см3/м2'));
+        }
         ulElement.append(makeLi('площадь запечатки:', printAreaNumber, '%'));
         
         answerBlockElement.append(shortAnswerElement);

@@ -15,13 +15,13 @@ $(function () {
       otherContent = $('.answer__description', answerWrapper),
       reqHeight = 45;
 
-    console.log(reqHeight);
+    //console.log(reqHeight);
 
     if (!answerBlock.hasClass(activeClass)) {
       answerBlocks.removeClass(activeClass);
       answerBlock.addClass(activeClass);
 
-      console.log('нет класса а');
+      //console.log('нет класса а');
 
       otherContent.css({
         'height': 0
